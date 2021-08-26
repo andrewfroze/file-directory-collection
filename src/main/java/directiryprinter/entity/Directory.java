@@ -36,7 +36,7 @@ public class Directory {
     }
 
     private void calculateTabForChildren() {
-        this.tabToPrintForChildren = tabToPrint;
+        this.tabToPrintForChildren = tabToPrint + "   ";
         for (int i = 0, l = directoryName.length(); i < l; i++) {
             this.tabToPrintForChildren += " ";
         }
@@ -52,7 +52,7 @@ public class Directory {
             resultString.append(file);
         }
         resultString.append("\n");
-        resultString.append(tabToPrintForChildren + "  ").append("]");
+        resultString.append(tabToPrintForChildren).append("]");
         return resultString.toString();
     }
 }
